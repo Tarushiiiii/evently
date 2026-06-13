@@ -34,7 +34,7 @@ const Header = async () => {
         )}
         {userId && (
           <div className="flex w-32 justify-end gap-3">
-            <UserButton afterSignOutUrl="/" />
+            <UserButton />
             <MobileNav />
           </div>
         )}
