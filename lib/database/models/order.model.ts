@@ -1,18 +1,11 @@
-import { Schema, model, models, Document } from 'mongoose'
+import { Schema, model, models, Document, Types } from 'mongoose'
 
 export interface IOrder extends Document {
     createdAt: Date
     stripeId: string
     totalAmount: string
-    event: {
-        _id: string
-        title: string
-    }
-    buyer: {
-        _id: string
-        firstName: string
-        lastName: string
-    }
+    event: Types.ObjectId
+    buyer: Types.ObjectId
 }
 
 export type IOrderItem = {
@@ -47,6 +40,6 @@ const OrderSchema = new Schema({
     },
 })
 
-const Order = models.Order || model('Order', OrderSchema)
+const Order = models.Order || model<IOrder>("Order", OrderSchema);
 
 export default Order
