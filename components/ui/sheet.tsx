@@ -73,7 +73,7 @@ function SheetContent({
             <Button
               variant="ghost"
               className="absolute top-3 right-3"
-              size="icon-sm"
+              size="icon"
             >
               <XIcon
               />
@@ -114,7 +114,7 @@ function SheetTitle({
     <SheetPrimitive.Title
       data-slot="sheet-title"
       className={cn(
-        "text-base font-medium text-foreground",
+        "font-heading text-base font-medium text-foreground",
         className
       )}
       {...props}

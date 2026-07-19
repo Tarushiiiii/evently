@@ -37,7 +37,7 @@ export default function Home() {
           Trusted by <br /> Thousands of Events
         </h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          Search CategoryFilter
+          Search Category Filter
         </div>
       </section>
     </main>
